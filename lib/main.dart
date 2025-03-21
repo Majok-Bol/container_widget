@@ -8,60 +8,26 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text('Container Widget',style: TextStyle(color: Colors.black,fontSize: 20),
+          backgroundColor: Colors.white,
+          title: Text('Container Widget',style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
           ),
         centerTitle: true,
         ),
-        body: Container(
-          margin: EdgeInsets.symmetric(vertical: 10,horizontal: 5),
+        body:Center(child:  Container(
+          margin: EdgeInsets.symmetric(vertical: 150,horizontal: 50),
           padding: EdgeInsets.all(10.0),
+          width: double.infinity,
+          height: double.infinity,
           decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(250),
+
           ),
-child: Column(
-  children: [
-    Column(
-      children: [
-        Text('One'),
-        Text('Two'),
-        Text('Three'),
-        Text('Four'),
-        Text('Five'),
-      ],
-    ),
-    Row(
-      children: [
-        Text('1'),
-        Text('2'),
-        Text('3'),
-        Text('4'),
-        Text('5'),
-      ],
-    ),
-    Column(
-      children: [
-        Text('six'),
-        Text('seven'),
-        Text('eight'),
-        Text('nine'),
-        Text('ten'),
-      ],
-    ),
-    Row(
-      children: [
-        Text('One'),
-        Text('Two'),
-        Text('Three'),
-        Text('Four'),
-        Text('Five'),
-      ],
-    ),
-  ],
-),
+          child: Center(child: Text('Everything in Flutter is a Widget',style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),),
         ),
+      ),
       ),
     );
   }
